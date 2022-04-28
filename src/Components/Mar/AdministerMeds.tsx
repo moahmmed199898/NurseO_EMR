@@ -1,11 +1,9 @@
-import { findIndex } from 'lodash';
+import { findIndex , filter} from 'lodash';
 import React, { ChangeEvent } from 'react';
 import PureModal from 'react-pure-modal';
-import { filter } from 'lodash';
 import Database from '../../Services/Database';
-import { $patient, $providerOrdersAvailable } from '../../Services/State';
-import { MedicationOrder, OrderType, PatientChart } from '../../Types/PatientProfile';
-import EmptyCard from '../Dashboard/Card/EmptyCard';
+import {EmptyCard, MedicationOrder, OrderType, PatientChart,
+     $patient, $providerOrdersAvailable} from 'nurse-o-core';
 
 type Props = {
     patient: PatientChart

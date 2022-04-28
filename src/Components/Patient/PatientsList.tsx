@@ -2,7 +2,7 @@ import React from 'react';
 import PureModal from "react-pure-modal";
 import Database from '../../Services/Database';
 import { PatientChart } from '../../Types/PatientProfile';
-import Card from '../Dashboard/Card/Card';
+import {Card} from 'nurse-o-core';
 import Button from '../Form/Button';
 import ButtonWConfirmBox from '../Form/ButtonWConfirmBox';
 import CreatePatient from './CreatePatient/CreatePatient';

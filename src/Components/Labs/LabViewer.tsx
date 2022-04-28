@@ -1,5 +1,5 @@
 import React from 'react';
-import EmptyCard from '../Dashboard/Card/EmptyCard';
+import {EmptyCard} from 'nurse-o-core';
 
 type Props = {
     docLink?: string

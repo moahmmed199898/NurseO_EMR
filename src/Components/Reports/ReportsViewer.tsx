@@ -1,10 +1,7 @@
 import React from 'react';
-import { StudentReport } from '../../Types/Report';
-import EmptyCard from '../Dashboard/Card/EmptyCard';
 import { filter, groupBy, uniq } from "lodash"
 import ReportTabs from './ReportTabs';
-import { $patient } from '../../Services/State';
-import { Note } from '../../Types/PatientProfile';
+import {Note, $patient, EmptyCard,StudentReport} from "nurse-o-core"
 
 type Props = {
     studentReport: StudentReport[],

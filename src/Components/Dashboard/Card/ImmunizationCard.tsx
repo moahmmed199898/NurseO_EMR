@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import {Card} from 'nurse-o-core';
 
 type Props = React.HTMLAttributes<HTMLDivElement> & {
     immunizations: string[],
@@ -10,7 +10,7 @@ export default class ImmunizationCard extends React.Component<Props> {
 
     public render() {
         return (
-            <Card className={this.props.className} title="Immunizations" admin={this.props.preview}>
+            <Card className={this.props.className} title="Immunizations">
             <thead className="font-bold">
                 <tr>
                     <td className="border-2 p-2">Taken Immunization</td>

@@ -1,11 +1,10 @@
 import { orderBy } from 'lodash';
 import React from 'react';
 import { MedicalIssue } from '../../../Types/PatientProfile';
-import Card from './Card';
+import {Card} from 'nurse-o-core';
 
 type Props = React.HTMLAttributes<HTMLDivElement> & {
     history: MedicalIssue[],
-    preview?: boolean
 }
 export default class HistoryCard extends React.Component<Props> {
 
@@ -16,7 +15,7 @@ export default class HistoryCard extends React.Component<Props> {
 
     public render() {
         return (
-            <Card className={this.props.className} title="History" admin={this.props.preview}>
+            <Card className={this.props.className} title="History">
             <thead className="font-bold">
                 <tr>
                     <td className="border-2 p-2">Date</td>

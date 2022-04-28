@@ -2,12 +2,11 @@ import { filter } from 'lodash';
 import React from 'react';
 import { $providerOrdersAvailable } from '../../../Services/State';
 import { MedicationOrder, OrderType } from '../../../Types/PatientProfile';
-import Card from './Card';
+import {Card} from 'nurse-o-core';
 import MedicationEntry from './MedicationEntry';
 
 type Props = React.HTMLAttributes<HTMLDivElement> &  {
     medications: MedicationOrder[] | undefined,
-    preview?: boolean
 }
 
 
@@ -35,7 +34,7 @@ export default class MedicationCard extends React.Component<Props, State> {
 
     public render() {
         return (
-            <Card title="Medications" className={this.props.className} admin={this.props.preview}>
+            <Card title="Medications" className={this.props.className}>
                 <thead className="font-bold">
                     <tr>
                         <td className="border-2 p-2">Name</td>

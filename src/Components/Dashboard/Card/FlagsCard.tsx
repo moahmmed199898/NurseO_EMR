@@ -1,18 +1,17 @@
 import React from 'react';
 import { Flag } from '../../../Types/PatientProfile';
-import Card from './Card';
+import {Card} from 'nurse-o-core';
 import FlagEntry from './FlagEntry';
 
 type Props = React.HTMLAttributes<HTMLDivElement> & {
     flags: Flag[] | undefined,
-    preview?: boolean
 }
 
 export default class FlagsCard extends React.Component<Props> {
 
     public render() {
         return (
-            <Card className={this.props.className} title="Flags" admin={this.props.preview}>
+            <Card className={this.props.className} title="Flags">
             <thead className="font-bold">
                 <tr>
                     <td className="border-2 p-2">Flag</td>

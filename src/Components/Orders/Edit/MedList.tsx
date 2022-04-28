@@ -1,10 +1,7 @@
 import { filter } from 'lodash';
 import React from 'react';
 import Database from '../../../Services/Database';
-import { Medication } from '../../../Types/Medications';
-import EmptyCard from '../../Dashboard/Card/EmptyCard';
-import Button from '../../Form/Button';
-import ButtonWConfirmBox from '../../Form/ButtonWConfirmBox';
+import {EmptyCard, Button,ButtonWConfirmBox, Medication} from 'nurse-o-core';
 import MedEditor from './MedEditor';
 
 type Props = {
@@ -86,7 +83,7 @@ export default class MedList extends React.Component<Props, State> {
 
     public render() {
         return (
-            <EmptyCard title='Medications' admin className='w-70vw block m-auto'>
+            <EmptyCard title='Medications' className='w-70vw block m-auto'>
                 <table className='w-full'>
                     <thead>
                         <tr>
@@ -101,7 +98,7 @@ export default class MedList extends React.Component<Props, State> {
                             <tr key={i} className='odd:bg-gray-100 even:bg-gray-300 h-14 text-center'>
                                 <td>{med.barcode}</td>
                                 <td>{med.name}</td>
-                                <td><Button admin onClick={() => this.onEditClickHandler(i)}>Edit</Button></td>
+                                <td><Button onClick={() => this.onEditClickHandler(i)}>Edit</Button></td>
                                 <td><ButtonWConfirmBox className='bg-primary' onConfirm={() => this.onDeleteClickHandler(i)} 
                                 confirmPrompt={`Are you sure you want to delete ${this.state.medications[i].name}?`}
                                 >Delete</ButtonWConfirmBox></td>
@@ -112,7 +109,7 @@ export default class MedList extends React.Component<Props, State> {
                 </table>
                 <div className='flex flex-row-reverse'>
                     <div className='block w-144 -mr-64'>
-                        <Button admin className='mt-3 mb-2' onClick={()=>this.setState({showAdder: true})}>Add Medication</Button>
+                        <Button className='mt-3 mb-2' onClick={()=>this.setState({showAdder: true})}>Add Medication</Button>
 
 
                         {this.state.showEditor ? <MedEditor onUpdate={this.onMedEdited.bind(this)} med={this.state.medications[this.state.medEditIndex]} 
